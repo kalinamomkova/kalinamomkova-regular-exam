@@ -43,9 +43,9 @@ jobs:
     - name: Run ui tests
       run: npm run test:ui
   deploy:
-  runs-on: ubuntu-latest
-  needs: build_and_run_unit_tests
-  steps:
+    runs-on: ubuntu-latest
+    needs: build_and_run_unit_tests
+    steps:
     - name: Checkout repo
       uses: actions/checkout@v4
     - name: Deploy to Render
